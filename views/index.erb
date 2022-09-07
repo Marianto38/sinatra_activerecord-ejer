@@ -1,0 +1,29 @@
+
+<div class="container">
+  <h3> RESTAURANTS LIST</h3>
+  <hr>
+  <a href="restaurants/new" class="btn btn-dark">Add</a> <a href="/" class="btn btn-info">Back</a>
+   <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">Type Of Food</th>
+        <th scope="col">Phone number</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @restaurants.each do |restaurant|  %>
+      <tr>
+        <td> <%= restaurant.name %> </td>
+        <td> <%= restaurant.address %> </td>
+        <td> <%= restaurant.city %> </td>
+        <td> <%= restaurant.type_food %></td>
+        <td> <%= restaurant.phone_numer %></td>
+        <td><a href="restaurants/<%= restaurant.id %>"><i class="fa-solid fa-arrow-up-from-bracket"></i></i></a></td>
+      </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

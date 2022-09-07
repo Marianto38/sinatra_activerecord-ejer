@@ -1,0 +1,40 @@
+<hr>
+<hr>
+<hr>
+<div class="container" style="max-width: 540px;">
+<h3 class="text-center">Edit Restaurant</h3>
+
+<div class="container">
+
+      <form action="/restaurants/<%=@restaurant.id%>" method="post">
+      <input type="hidden" name="_method" value="patch">
+
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input value="<%=@restaurant.name%>" type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="address">Direccion</label>
+          <input value="<%=@restaurant.address%>" type="text" class="form-control" id="address" name="address">
+        </div>
+        <div class="form-group">
+          <label for="city">Ciudad</label>
+          <input value="<%=@restaurant.city%>" type="text" class="form-control" id="city" name="city">
+        </div>
+        <div class="form-group">
+          <label for="phone_numer">Nro. Telefono</label>
+          <input value="<%=@restaurant.phone_numer%>" type="text" class="form-control" id="phone_numer" name="phone_numer">
+        </div>
+        <div class="form-group">
+          <label for="image_url">URL imagen</label>
+          <input value="<%=@restaurant.image_url%>" type="text" class="form-control" id="image_url" name="image_url">
+        </div>
+        <div class="form-group">
+          <label for="type_food">Tipo de Comida</label>
+          <input value="<%=@restaurant.type_food%>" type="text" class="form-control" id="type_food" name="type_food">
+        </div>
+
+        <input type="submit" value="Guardar" class="btn btn-dark mx-2 my-2">
+      </form>
+  </div>
+</div>

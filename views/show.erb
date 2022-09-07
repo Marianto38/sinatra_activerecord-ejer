@@ -1,0 +1,31 @@
+<div class="col 12">
+<hr>
+<hr>
+<hr>
+<div class="card mb-3" style="max-width: 920px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img width=350px src="<%= @restaurant.image_url%>" class="img-fluid rounded-start" alt="../img/sin-imagen.jpg">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body" >
+        <h5 class="card-title"><%= @restaurant.name.upcase %></h5>
+        <li class="fs-3"> <%= @restaurant.address %> </li>
+        <li class="fs-3"> <%= @restaurant.city %> </li>
+        <li class="fs-3"> <%= @restaurant.phone_numer %> </li>
+        <li class="fs-3"> <%= @restaurant.type_food %> </li>
+    </div>
+  </div>
+  </div>
+</div>
+
+  <div class="row">
+        <div class="col-6">
+          <form action="/restaurants/<%=@restaurant.id %>" method="post" class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Borrar" class="btn btn-dark mx-2">
+             <a href="/restaurants/<%=@restaurant.id%>/edit" class="btn btn-info">Editar</a>
+          </form>
+        </div>
+      </div>
+    </div>
